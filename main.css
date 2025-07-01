@@ -1,0 +1,714 @@
+/* SilicoQuest Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.6s ease-out;
+}
+
+.popup-header h1 {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.silico-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Silico Character Styles */
+.silico-character {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: bounce 2s infinite;
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.3);
+}
+
+.silico-face {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.silico-eyes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.eye {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 3s infinite;
+}
+
+.silico-mouth {
+    width: 20px;
+    height: 10px;
+    border: 2px solid white;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    margin: 5px auto 0;
+    animation: smile 2s infinite alternate;
+}
+
+.speech-bubble {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 1rem;
+    position: relative;
+    max-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #e2e8f0;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f7fafc;
+}
+
+.instruction {
+    color: #4a5568;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.credits {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Main App Styles */
+.app-container {
+    height: 100vh;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #38a169);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.chapter-indicators {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.chapter-indicator {
+    flex: 1;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.chapter-indicator.active {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    transform: scale(1.05);
+}
+
+.chapter-indicator.completed {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+}
+
+/* Chapter Container */
+.chapter-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chapter-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.chapter-header h1 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    animation: slideInDown 0.3s ease-out;
+}
+
+.chapter-number {
+    color: #718096;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Silico Narrator */
+.silico-narrator {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    animation: slideInLeft 0.3s ease-out;
+    flex-shrink: 0;
+}
+
+.silico-narrator .silico-character {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.silico-narrator .speech-bubble {
+    flex: 1;
+    max-width: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Visual Stage */
+.visual-stage {
+    background: linear-gradient(135deg, #f7fafc, #edf2f7);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.stage-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Game Area */
+.game-area {
+    background: linear-gradient(135deg, #fed7d7, #feb2b2);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Controls */
+.navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-shrink: 0;
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    margin-left: auto;
+}
+
+.next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(72, 187, 120, 0.3);
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(66, 153, 225, 0.3);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Certificate Styles */
+.certificate-content {
+    max-width: 600px;
+    width: 95%;
+}
+
+.certificate {
+    background: linear-gradient(135deg, #f7fafc, #edf2f7);
+    border: 3px solid #4299e1;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.certificate-header h1 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-header h2 {
+    color: #4a5568;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.certificate-body p {
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-body h3 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin: 1rem 0;
+    border-bottom: 2px solid #4299e1;
+    padding-bottom: 0.5rem;
+}
+
+.certificate-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#nameInput {
+    padding: 0.8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    min-width: 200px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(72, 187, 120, 0.3);
+}
+
+.close-btn {
+    background: #e53e3e;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(229, 62, 62, 0.3);
+}
+
+/* Audio Controls */
+.audio-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.audio-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.audio-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+@keyframes smile {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1.2);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 0.3rem;
+        height: 100vh;
+    }
+    
+    .popup-content {
+        padding: 1rem;
+        margin: 0.5rem;
+        max-width: 95%;
+    }
+    
+    .popup-header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .silico-intro {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .chapter-container {
+        padding: 0.8rem;
+    }
+    
+    .chapter-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .silico-narrator {
+        flex-direction: row;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .silico-narrator .silico-character {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .visual-stage {
+        height: 150px;
+        padding: 0.8rem;
+    }
+    
+    .navigation-controls {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .nav-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .chapter-indicators {
+        gap: 0.3rem;
+    }
+    
+    .chapter-indicator {
+        min-width: 50px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    
+    .certificate-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    #nameInput {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .progress-tracker {
+        padding: 0.5rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .game-area {
+        flex: 1;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 0.2rem;
+    }
+    
+    .chapter-container {
+        padding: 0.5rem;
+    }
+    
+    .chapter-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .visual-stage {
+        height: 120px;
+        padding: 0.5rem;
+    }
+    
+    .silico-narrator {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .silico-narrator .silico-character {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .nav-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .chapter-indicator {
+        min-width: 40px;
+        height: 25px;
+        font-size: 0.6rem;
+    }
+    
+    .progress-tracker {
+        padding: 0.4rem;
+    }
+    
+    .speech-bubble {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .visual-stage {
+        height: 100px;
+    }
+    
+    .chapter-header {
+        margin-bottom: 0.5rem;
+    }
+    
+    .silico-narrator {
+        margin-bottom: 0.5rem;
+    }
+    
+    .navigation-controls {
+        margin-top: 0.5rem;
+    }
+}

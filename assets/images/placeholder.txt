@@ -1,0 +1,13 @@
+# Images Directory
+
+This directory will contain visual assets for the application.
+
+Expected files:
+- silico-character.svg - Main character illustrations
+- chapter-backgrounds/ - Background images for each chapter
+- game-assets/ - Images used in mini-games
+- icons/ - UI icons and symbols
+- certificates/ - Certificate template assets
+
+Note: All images should be optimized for web (compressed, appropriate formats)
+SVG preferred for scalable graphics, PNG/JPG for photographs

@@ -1,0 +1,13 @@
+# Audio Files Directory
+
+This directory will contain the audio narration files for each chapter.
+
+Expected files:
+- scene1_1.mp3 - Chapter 1, Stage 1 narration
+- scene1_2.mp3 - Chapter 1, Stage 2 narration
+- scene1_3.mp3 - Chapter 1, Stage 3 narration
+- scene2_1.mp3 - Chapter 2, Stage 1 narration
+... and so on for all chapters
+
+Note: Audio files should be optimized for web delivery (compressed, appropriate bitrate)
+Voice should be clear, engaging, and appropriate for middle/high school students.

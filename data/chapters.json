@@ -1,0 +1,252 @@
+{
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The Sand of Intelligence",
+      "description": "Discover how ordinary sand contains the secret ingredient for computer chips",
+      "narration": [
+        {
+          "text": "Hi there! I'm Silico, your silicon guide! 🌟 Somewhere in the vast deserts of Earth lies the mind of your next computer...",
+          "voice": "audio/scene1_1.mp3",
+          "visual": "desert_scene",
+          "duration": 5000
+        },
+        {
+          "text": "This shiny crystal you see is quartz - it contains silicon, the most important ingredient of every computer chip on Earth!",
+          "voice": "audio/scene1_2.mp3",
+          "visual": "quartz_crystal",
+          "duration": 6000
+        },
+        {
+          "text": "But not all rocks contain pure silicon. Let's learn to identify the right ones! Ready for your first challenge?",
+          "voice": "audio/scene1_3.mp3",
+          "visual": "rock_collection",
+          "duration": 5000
+        }
+      ],
+      "game": {
+        "name": "Quartz Sorter",
+        "description": "Sort pure quartz crystals from other rocks using drag & drop",
+        "type": "sorting",
+        "script": "games/quartz-sorter.js"
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The Great Purification",
+      "description": "Learn how raw silicon is purified in massive furnaces",
+      "narration": [
+        {
+          "text": "Great job finding those quartz crystals! Now we need to extract pure silicon from them. This happens in giant furnaces!",
+          "voice": "audio/scene2_1.mp3",
+          "visual": "furnace_exterior",
+          "duration": 5000
+        },
+        {
+          "text": "The furnace heats up to over 2000°C! That's hot enough to melt copper! We mix the quartz with carbon to create a chemical reaction.",
+          "voice": "audio/scene2_2.mp3",
+          "visual": "furnace_interior",
+          "duration": 6000
+        },
+        {
+          "text": "Your job is to control the temperature and timing. Too hot or too cold, and the process fails!",
+          "voice": "audio/scene2_3.mp3",
+          "visual": "control_panel",
+          "duration": 5000
+        }
+      ],
+      "game": {
+        "name": "Furnace Controller",
+        "description": "Control furnace temperature and valves to purify silicon",
+        "type": "control",
+        "script": "games/furnace-controller.js"
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Growing the Perfect Crystal",
+      "description": "Watch as molten silicon grows into perfect crystal structures",
+      "narration": [
+        {
+          "text": "Excellent temperature control! Now we have molten silicon. But we need it in perfect crystal form for computer chips.",
+          "voice": "audio/scene3_1.mp3",
+          "visual": "molten_silicon",
+          "duration": 5000
+        },
+        {
+          "text": "We use a special process called the Czochralski method. A tiny seed crystal is dipped into molten silicon and slowly pulled up.",
+          "voice": "audio/scene3_2.mp3",
+          "visual": "crystal_growing",
+          "duration": 7000
+        },
+        {
+          "text": "The crystal must rotate at just the right speed while being pulled. Too fast or slow, and the crystal structure breaks!",
+          "voice": "audio/scene3_3.mp3",
+          "visual": "crystal_rotation",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Crystal Grower",
+        "description": "Control rotation speed and pulling rate to grow perfect silicon crystals",
+        "type": "precision",
+        "script": "games/crystal-grower.js"
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Slicing the Silicon Wafer",
+      "description": "Cut the crystal into thin wafers - the foundation of all chips",
+      "narration": [
+        {
+          "text": "Perfect! You've grown a beautiful silicon crystal, called an ingot. Now we need to slice it into thin wafers.",
+          "voice": "audio/scene4_1.mp3",
+          "visual": "silicon_ingot",
+          "duration": 5000
+        },
+        {
+          "text": "Each wafer is thinner than a human hair! We use diamond-wire saws because silicon is very hard to cut.",
+          "voice": "audio/scene4_2.mp3",
+          "visual": "wafer_slicing",
+          "duration": 6000
+        },
+        {
+          "text": "After cutting, each wafer must be polished to mirror perfection. Even tiny scratches can ruin a computer chip!",
+          "voice": "audio/scene4_3.mp3",
+          "visual": "wafer_polishing",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Wafer Slicer",
+        "description": "Slice silicon ingots and polish wafers to perfection",
+        "type": "precision",
+        "script": "games/wafer-slicer.js"
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Building Logic Gates",
+      "description": "Create the basic building blocks of computer logic",
+      "narration": [
+        {
+          "text": "Now we have perfect silicon wafers! Time to build logic gates - the basic elements that make computers think.",
+          "voice": "audio/scene5_1.mp3",
+          "visual": "clean_wafer",
+          "duration": 5000
+        },
+        {
+          "text": "Logic gates are like tiny switches that can be ON or OFF. We create them by adding special materials to specific areas of the wafer.",
+          "voice": "audio/scene5_2.mp3",
+          "visual": "logic_gates",
+          "duration": 7000
+        },
+        {
+          "text": "Using photolithography, we shine light through masks to create patterns. It's like using stencils, but incredibly precise!",
+          "voice": "audio/scene5_3.mp3",
+          "visual": "photolithography",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Gate Designer",
+        "description": "Arrange gate masks to complete logic gate designs",
+        "type": "puzzle",
+        "script": "games/gate-designer.js"
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Connecting the Brain",
+      "description": "Wire up logic gates to create computational circuits",
+      "narration": [
+        {
+          "text": "Great work creating those logic gates! Now we need to connect them together to make circuits that can actually compute.",
+          "voice": "audio/scene6_1.mp3",
+          "visual": "individual_gates",
+          "duration": 5000
+        },
+        {
+          "text": "When we connect AND, OR, and NOT gates in different ways, we can create an ALU - Arithmetic Logic Unit - the calculator inside every processor!",
+          "voice": "audio/scene6_2.mp3",
+          "visual": "alu_circuit",
+          "duration": 7000
+        },
+        {
+          "text": "Let's build a simple ALU that can add numbers. Connect the gates correctly and watch the magic happen!",
+          "voice": "audio/scene6_3.mp3",
+          "visual": "alu_construction",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Circuit Builder",
+        "description": "Connect logic gates to build working computational circuits",
+        "type": "connection",
+        "script": "games/circuit-builder.js"
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "Programming the Silicon Brain",
+      "description": "Write your first program for the silicon chip you helped create",
+      "narration": [
+        {
+          "text": "Amazing! You've built a working processor! Now let's program it to solve problems. This is where silicon truly becomes a 'brain'.",
+          "voice": "audio/scene7_1.mp3",
+          "visual": "working_processor",
+          "duration": 6000
+        },
+        {
+          "text": "Programs are just sequences of instructions that tell the processor what to do. Let's start with simple commands like 'add' and 'store'.",
+          "voice": "audio/scene7_2.mp3",
+          "visual": "instruction_set",
+          "duration": 6000
+        },
+        {
+          "text": "You'll drag and drop code blocks to create a program. Watch how your silicon creation follows your instructions perfectly!",
+          "voice": "audio/scene7_3.mp3",
+          "visual": "visual_programming",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Code Builder",
+        "description": "Create programs using drag-and-drop code blocks",
+        "type": "programming",
+        "script": "games/code-builder.js"
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "The Silicon Revolution",
+      "description": "Celebrate your journey and see how silicon powers our modern world",
+      "narration": [
+        {
+          "text": "Congratulations! You've completed the incredible journey from sand to silicon brain! Let's see what you've accomplished.",
+          "voice": "audio/scene8_1.mp3",
+          "visual": "journey_recap",
+          "duration": 6000
+        },
+        {
+          "text": "The silicon chip you helped create is now the brain of smartphones, computers, cars, and even space rockets!",
+          "voice": "audio/scene8_2.mp3",
+          "visual": "silicon_applications",
+          "duration": 7000
+        },
+        {
+          "text": "From a grain of sand to the most important technology of our time - you've witnessed the silicon revolution! Ready for your certificate?",
+          "voice": "audio/scene8_3.mp3",
+          "visual": "celebration",
+          "duration": 6000
+        }
+      ],
+      "game": {
+        "name": "Knowledge Quiz",
+        "description": "Test your understanding of the silicon chip creation process",
+        "type": "quiz",
+        "script": "games/knowledge-quiz.js"
+      }
+    }
+  ]
+}
