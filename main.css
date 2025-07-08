@@ -600,19 +600,19 @@ body::before {
 .silico-narrator {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 1rem;
     animation: slideInLeft 0.8s ease-out;
     flex-shrink: 0;
     width: 100%;
     justify-content: flex-start;
     position: relative;
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .silico-narrator .silico-character {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
     position: relative;
     z-index: 2;
@@ -621,15 +621,15 @@ body::before {
 
 .silico-narrator .speech-bubble {
     flex: 1;
-    max-width: calc(100% - 140px);
-    font-size: 1.1rem;
-    line-height: 1.6;
+    max-width: calc(100% - 120px);
+    font-size: 1rem;
+    line-height: 1.5;
     word-break: break-word;
     white-space: normal;
     position: relative;
     z-index: 1;
-    align-self: center;
-    padding: 1.2rem;
+    align-self: flex-start;
+    padding: 1rem;
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
@@ -637,14 +637,14 @@ body::before {
     box-shadow: var(--shadow-light);
     color: white;
     font-weight: 500;
-    margin-left: 0.5rem;
+    margin-top: 10px;
 }
 
 .silico-narrator .speech-bubble::before {
     content: '';
     position: absolute;
     left: -12px;
-    top: 30px;
+    top: 20px;
     width: 0;
     height: 0;
     border-top: 12px solid transparent;
@@ -656,7 +656,7 @@ body::before {
     content: '';
     position: absolute;
     left: -10px;
-    top: 30px;
+    top: 20px;
     width: 0;
     height: 0;
     border-top: 12px solid transparent;
@@ -712,17 +712,18 @@ body::before {
     backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
-    padding: 1.5rem 2vw;
+    padding: 1rem;
     margin-bottom: 0.8rem;
-    flex: 2 1 100%;
-    min-height: 300px;
-    max-height: 45vh;
-    overflow: visible;
+    flex: 1 1 auto;
+    min-height: 400px;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -743,7 +744,10 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 350px;
 }
 
 /* Enhanced Navigation Controls */
